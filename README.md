@@ -27,6 +27,7 @@ Users should be able to:
 
 ### Links
 
+- Solution URL (https://github.com/adebimpecole/order-summary-component.git)
 - Live Site URL: (https://fabulous-narwhal-1c30be.netlify.app/)
 
 

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: hsl(225, 100%, 94%);
+      font-size: 16px;
+      font-family: 'Red Hat Display', sans-serif;
+      
+    }
+    .container{
+      display: flex;
+      background-image: none;
+      background-color: white;
+      text-align: center;
+      width: 350px;
+      flex-direction: column;
+      border-radius: 15px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+    #heroimg{
+      width: inherit;
+      height: 200px;
+      border-radius: 15px 15px 0 0;
+    }
+    .parent{
+      margin: 25px;
+    }
+    #child1{
+      font-size: 20px; 
+      margin: 3px 0 23px 0; 
+      font-weight: 900;
+    }
+    #child2{
+      color: hsl(224, 23%, 55%);
+      font-size: 14px;
+      margin: 10px;
+    }
+    #child3{
+      background-color: hsl(225, 100%, 98%); 
+      border-radius: 10px; 
+      margin: 10px; 
+      padding: 20px; 
+      display: flex;
+      height: 25px;
+      align-items: center;
+    }
+    #child3img{
+      width: 40px; 
+      height: 40px;
+    }
+    #child3_0{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      justify-content: space-between;
+      padding-left: 10px;
+      column-gap: 60px;
+      row-gap: 0;
+    }
+    #child3_0_0{
+      display: flex; 
+      flex-direction: column; 
+      line-height: 13px;
+      justify-content: center;
+    }
+    #child3_0_0_0{
+      color: hsl(224, 23%, 55%);
+      margin: 0;
+      font-size: 14px;
+    }
+    #child3_0_0_1{
+      font-size: 14px;
+    }
+    #child3_0_1{
+      color: hsl(245, 75%, 52%); 
+      text-decoration: underline;
+      font-size: 14px;
+    }
+    #child3_0_1:hover{
+      text-decoration: none;
+      color: hsl(245, 80%, 65%);
+    }
+    #child4{
+      background-color: hsl(245, 75%, 52%); 
+      color: white; 
+      font-weight: 700; 
+      height: 35px; 
+      border-radius: 10px; 
+      margin: 20px 10px 20px 10px; 
+      font-size: 13px;
+      padding-top: 13px;
+      box-shadow: 0 10px 1.2em hsl(226, 29%, 69%); 
+    }
+    #child4:hover{
+      background-color: hsl(245, 80%, 65%);
+    }
+    #child5{
+      font-size: 13px;
+      color: hsl(224, 23%, 55%);
+    }
+    #child5:hover{
+      color: hsl(223, 47%, 23%);
+    }
+    @media only screen and (max-width: 480px) {
+      body{
+        background-image: url("images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 14px;
+      }
+      .container{
+        width: 250px;
+        border-radius: 10px;
+      }
+      #heroimg{
+        height: 150px;
+        border-radius: 15px 15px 0 0;
+      }
+      .parent{
+        margin: 20px;
+      }
+      #child1{
+        font-size: 18px; 
+        margin: 3px 0 20px 0; 
+        font-weight: 700;
+      }
+      #child2{
+        font-size: 12px;
+        margin: 7px;
+      }
+      #child3{
+        margin: 8px; 
+        padding: 15px 15px 15px 5px; 
+        height: 21px;
+      }
+      #child3img{
+        width: 35px; 
+        height: 35px;
+      }
+      #child3_0{
+        padding-left: 8px;
+        column-gap: 30px;
+      }
+      #child3_0_0{
+        line-height: 10px;
+      }
+      #child3_0_0_0{
+        font-size: 12px;
+      }
+      #child3_0_0_1{
+        font-size: 12px;
+      }
+      #child3_0_1{
+        font-size: 12px;
+      }
+      #child4{
+        font-weight: 400; 
+        height: 32px; 
+        margin: 18px 8px 18px 8px; 
+        font-size: 12px;
+        padding-top: 12px;
+        box-shadow: 0 8px 1em hsl(226, 29%, 69%); 
+      }
+      #child5{
+        font-size: 12px;
+        color: hsl(224, 23%, 55%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img id="heroimg" src="images/illustration-hero.svg">
+    <div class="parent">
+      <span id="child1"><b>Order Summary</b></span>
+      <div id = "child2">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </div>
+      <div id="child3">
+        <div><img src="images/icon-music.svg" id="child3img"></div>
+        <div id="child3_0">
+          <div id="child3_0_0">
+            <span id="child3_0_0_1">Annual Plan</span><br>
+            <span id="child3_0_0_0">$59.99/year</span> 
+          </div>
+          <div>
+            <span id="child3_0_1">Change</span> 
+          </div>
+        </div>
+      </div>
+      <div id="child4">Proceed to Payment</div>
+      <div id="child5">Cancel Order</div>
+    </div>
+    
+    
+  </div>
+   
+
+ 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mary Cole</a>.
+  </div>
+</body>
+</html>
